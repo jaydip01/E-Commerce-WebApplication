@@ -1,0 +1,32 @@
+package test;
+import java.io.*;
+import java.util.*;
+import javax.servlet.*;
+
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
+
+@SuppressWarnings("serial")
+@WebServlet("/viewUser")
+public class View_User_Servlet extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		Cookie c[] = req.getCookies();
+		if (c == null) {
+			req.setAttribute("msg", "Session Expired...<br>");
+			RequestDispatcher rd = req.getRequestDispatcher("Home.html");
+			rd.forward(req, res);
+		} else {
+			ArrayList<AllUserBean> al = new ViewAllUser_DAO().retrieve();
+			
+			String value = c[0].getValue();
+			HttpSession hs = req.getSession(true);
+			hs.setAttribute("al6", al);
+			req.setAttribute("fName", value);
+			RequestDispatcher rd = req.getRequestDispatcher("View_All_User.jsp");
+
+			rd.forward(req, res);
+		}
+
+	}
+}
