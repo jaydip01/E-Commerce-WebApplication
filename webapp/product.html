@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+}
+
+.container {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #ffffff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"]
+	{
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+input[type="submit"] {
+	background-color: #007BFF;
+	color: #fff;
+	border: none;
+	padding: 12px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+input[type="submit"]:hover {
+	background-color: #0056b3;
+}
+
+.form-footer {
+	text-align: center;
+}
+
+.form-footer p {
+	margin-top: 10px;
+}
+</style>
+</style>
+</head>
+<body>
+
+
+
+
+
+	<div class="container">
+		<form action="addProduct1" method="post" id="myForm" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="username">Code:</label> <input type="text"
+					placeholder="code" name="code" required>
+			</div>
+			<div class="form-group">
+				<label for="Product Name">Product Name:</label> <input type="text"
+					placeholder="Product Name" name="name" required>
+			</div>
+			<div class="form-group">
+				<label for="firstName">Price:</label> <input type="text"
+					placeholder="Product Price" name="price" required>
+			</div>
+			<div class="form-group">
+				<label for="qty">Quantity:</label> <input type="text"
+					placeholder="Product Qty" name="qty" id="qty" required><br>
+					<span id="error" style="color: red;"> </span>
+			</div>
+			<div class="form-group">
+				<label for="email">Common Name:</label> <input type="text"
+					placeholder="Common name" name="cname" required>
+			</div>
+			<div class="form-group">
+				<label for="phoneNumber">Market Price:</label> <input type="text"
+					placeholder="Market Price" name="mprice" required>
+			</div>
+			<div class="form-group">
+				<input type="hidden" name="action" value="insert"> 
+				<input type="file" name="image" accept="image">
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Add Product">
+			</div>
+		</form>
+
+	</div>
+	<script>
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+    const numberInput = document.getElementById('qty').value;
+
+    if (!isPositiveNumber(numberInput)) {
+      document.getElementById('error').innerText = 'Please enter a positive Quantity.';
+      event.preventDefault(); 
+    }
+  });
+
+  function isPositiveNumber(value) {
+    return /^\d+(\.\d+)?$/.test(value) && parseFloat(value) > 0;
+  }
+
+  document.getElementById('qty').addEventListener('focus', function() {
+    document.getElementById('error').innerText = '';
+  });
+</script>
+
+</body>
+</html>

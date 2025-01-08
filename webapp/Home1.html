@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Shopping</title>
+<style>
+.div1 {
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+	padding: 2px;
+	border: 1px solid blue;
+	background-color: #0000FF;
+}
+
+.div2 {
+	display: inline-block;
+	padding-left: 15px;
+	padding-top: 10px;
+	background-color: white;
+}
+
+.div3 {
+	display: inline-block;
+	padding-left: 300px;
+	padding-top: 4px;
+}
+
+.div4 {
+	display: inline-block;
+	width: 100px;
+	height: 25px;
+	background-color: white;
+	text-align: center;
+}
+
+.div5 {
+	display: inline-block;
+	padding-left: 15px;
+	color: white;
+}
+
+.div {
+	padding-left: 50px;
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	position: relative;
+	display: inline-block;
+	background-color: white;
+	width: 100px;
+	height: 25px;
+	text-align: center;
+}
+
+.option-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #f9f9f9;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container:hover .option-menu {
+	display: block;
+}
+
+/* Additional styling for the options */
+.option-menu a {
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color: #333;
+}
+
+.option-menu a:hover {
+	background-color: #ccc;
+}
+
+.showbar {
+	background-color: #F0FFFF;
+	width: 100%;
+	height: 100px;
+	justify-content: space-around;
+}
+
+img {
+	width: 100px;
+	height: 70px;
+}
+
+.Tv {
+	display: inline-block;
+}
+
+.mobile {
+	display: inline-block;
+}
+
+.Fashion {
+	display: inline-block;
+}
+
+.fas {
+	width: 50px;
+	height: 70px;
+}
+
+.main-container {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.child {
+	width: 12.5%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #ccc;
+}
+
+.child img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.main-container2 {
+	width: 100%;
+	height: 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.child2 {
+	width: 14.20%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #ccc;
+}
+
+.child2 img {
+	height: 85%;
+	width: 85%
+}
+
+.slider-container {
+	width: 100%;
+	height: 350px;
+	overflow: hidden;
+	position: relative;
+}
+
+/* Define the slider image styles */
+.slider-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	transition: opacity 1s ease-in-out;
+}
+</style>
+</head>
+<body>
+	<div class="div1">
+
+		<div class="div3">
+			<input type="text" placeholder="search for products,brands and more"
+				style="height: 27px; width: 400px;">
+		</div>
+		<div class="div">
+			<div class="container">
+				<a>Login</a>
+				<div class="option-menu">
+					<a href="Home.html">User</a> <a href="adminLogin.html"> Admin</a>
+				</div>
+			</div>
+			<div class="div5">See Offers</div>
+		</div>
+	</div>
+
+	<div class="main-container">
+		<div class="child">
+			<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2F&psig=AOvVaw1OqXacWKtvs-e-Yw_vZJtr&ust=1734691913804000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiE7ovVs4oDFQAAAAAdAAAAABAE">
+		</div>
+		<div class="child">
+			<img src="Images/Tv3.png" alt="Image 2">
+		</div>
+		<div class="child">
+			<img src="Images/camera.png" alt="Image 3">
+		</div>
+		<div class="child">
+			<img src="Images/fridge2.png" alt="Image 4">
+		</div>
+		<div class="child">
+			<img src="Images/bag2.png" alt="Image 5">
+		</div>
+		<div class="child">
+			<img src="Images/sho1.png" alt="Image 6">
+		</div>
+		<div class="child">
+			<img src="Images/sho2.png" alt="Image 7">
+		</div>
+		<div class="child">
+			<img src="Images/shirt3.png" alt="Image 8">
+		</div>
+	</div>
+
+	 <div class="slider-container">
+        <img class="slider-image" src="Images/sli1.png" alt="Image 1">
+        <img class="slider-image" src="Images/sli2.png" alt="Image 2">
+        <img class="slider-image" src="Images/sli3.png" alt="Image 3">
+        <img class="slider-image" src="Images/sli4.png" alt="Image 4">
+        <img class="slider-image" src="Images/sli5.png" alt="Image 5">
+    </div>
+
+
+	<div class="main-container2">
+		<div class="child2">
+			<img src="Images/dress.png" alt="Image 1">
+		</div>
+		<div class="child2">
+			<img src="Images/shirt1.png" alt="Image 2">
+		</div>
+		<div class="child2">
+			<img src="Images/dress3.png" alt="Image 3">
+		</div>
+		<div class="child2">
+			<img src="Images/shirt2.png" alt="Image 4">
+		</div>
+		<div class="child2">
+			<img src="Images/dress5.png" alt="Image 5">
+		</div>
+		<div class="child2">
+			<img src="Images/dress6.png" alt="Image 6">
+		</div>
+		<div class="child2">
+			<img src="Images/shirt1.png" alt="Image 7">
+		</div>
+
+	</div>
+	
+	<div class="main-container2">
+		<div class="child2">
+			<img src="Images/shoes1.png" alt="Image 1">
+		</div>
+		<div class="child2">
+			<img src="Images/shoes8.png" alt="Image 2">
+		</div>
+		<div class="child2">
+			<img src="Images/shoes3.png" alt="Image 3">
+		</div>
+		<div class="child2">
+			<img src="Images/shoes4.png" alt="Image 4">
+		</div>
+		<div class="child2">
+			<img src="Images/shoes5.png" alt="Image 5">
+		</div>
+		<div class="child2">
+			<img src="Images/shoes6.png" alt="Image 6">
+		</div>
+		<div class="child2">
+			<img src="Images/shoes7.png" alt="Image 7">
+		</div>
+
+	</div>
+	<script>
+	 const sliderImages = document.querySelectorAll('.slider-image');
+     let currentIndex = 0;
+
+     function nextImage() {
+         sliderImages[currentIndex].style.opacity = '0';
+         currentIndex = (currentIndex + 1) % sliderImages.length;
+         sliderImages[currentIndex].style.opacity = '1';
+     }
+
+     setInterval(nextImage, 2000); 
+	</script>
+</body>
+</html>
